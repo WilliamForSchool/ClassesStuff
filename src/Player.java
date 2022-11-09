@@ -52,5 +52,12 @@ public class Player {
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
+    public String toString() {
+        return name + "\n" + "-------------------------" + "\n" +
+                "Health: " + health + "\n" +
+                "Intelligence: " + intelligence + "\n" +
+                "Dexterity: " + dexterity + "\n" +
+                "Strength: " + strength;
+    }
 
 }
