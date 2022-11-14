@@ -57,7 +57,7 @@ public class Player {
                 "Health: " + health + "\n" +
                 "Intelligence: " + intelligence + "\n" +
                 "Dexterity: " + dexterity + "\n" +
-                "Strength: " + strength;
+                "Strength: " + strength + "\n";
     }
 
 }

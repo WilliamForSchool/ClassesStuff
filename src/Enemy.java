@@ -3,6 +3,8 @@ public class Enemy {
     private String name;
     private int health;
     private int ac; // armor class
+    private Weapon weapon1;
+    private Weapon weapon2;
 
     // constructor
     public Enemy(String name, int health, int ac) {
@@ -35,6 +37,6 @@ public class Enemy {
     public String toString() {
         return name + "\n" + "----------------" + "\n" +
                 "Health: " + health + "\n" +
-                "Armor Class: " + ac;
+                "Armor Class: " + ac + "\n";
     }
 }
