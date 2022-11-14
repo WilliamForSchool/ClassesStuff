@@ -1,14 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         Player p = new Player("Warrior", 100, 15, 16, 20);
-        Player p2 = new Player("Loser", 13, 1, 6, 9);
-        Enemy one = new Enemy("Mr.Evil", 23, 2);
-        Weapon sword = new Weapon("Balls", "11-20", "false?");
-        System.out.println(sword);
-        System.out.println(one);
-        System.out.println(p);
-        System.out.println(p2);
-
-
+        p.setWeapon1(new Weapon("LongSword", "1d8", "1d20"));
+        Enemy e1 = new Enemy("Skeleton", 12, 8);
+        int result = p.getWeapon1().attack(e1);
+        if (result == 0) {
+            System.out.println("You missed");
+        } else {
+            System.out.print("You did " + result + " points of damage.");
+        }
     }
 }

@@ -11,6 +11,9 @@ public class Player {
     private int dexterity; // how well a player uses dex weapons (bows, daggers)
     private int strength; // how well a player uses str weapons (swords, axes)
     private int intelligence; // how well a player can cast a spell
+    private Weapon weapon1;
+    private Weapon weapon2;
+
 
     // constructors, how to create new Players
     public Player(String name, int health, int dexterity, int strength, int intelligence) {
@@ -22,6 +25,23 @@ public class Player {
     }
 
     // methods, actions
+
+    public Weapon getWeapon1() {
+        return weapon1;
+    }
+
+    public void setWeapon1(Weapon weapon1) {
+        this.weapon1 = weapon1;
+    }
+
+    public Weapon getWeapon2() {
+        return weapon2;
+    }
+
+    public void setWeapon2(Weapon weapon2) {
+        this.weapon2 = weapon2;
+    }
+
     public String getName() {
         return name;
     }

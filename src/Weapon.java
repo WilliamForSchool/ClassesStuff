@@ -33,6 +33,8 @@ public class Weapon {
         this.toHit = toHit;
     }
 
+
+
     @Override
     public String toString() {
         return "Weapon{" +
@@ -41,5 +43,14 @@ public class Weapon {
                 ", toHit='" + toHit + '\'' +
                 '}';
     }
+    public int attack(Enemy e) {
+        int attackRoll = Dice.roll(toHit);
+        if (attackRoll >= e.getAc()) {
+            return Dice.roll(damage);
+        } else {
+            return 0;
+        }
+    }
+
 } // end class weapon
 
