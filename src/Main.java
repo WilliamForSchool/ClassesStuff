@@ -9,5 +9,6 @@ public class Main {
         } else {
             System.out.print("You did " + result + " points of damage.");
         }
+
     }
 }
