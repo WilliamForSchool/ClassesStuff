@@ -18,11 +18,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", type=" + type +
-                '}';
+        return name + " for $" + price + "\n";
     }
 
     public void setPrice(double price) {
