@@ -11,7 +11,7 @@ public class Main {
         s.addItem(Ham_Sandwich);
         s.addItem(Trail_Mix);
         s.printMenu();
-        System.out.println(s.getMostExpensiveItem())
-        System.out.print(s.averageMenuPrice());
+        System.out.println(s.getMostExpensiveItem());
+        System.out.println(s.averageMenuPrice());
     }
 }
