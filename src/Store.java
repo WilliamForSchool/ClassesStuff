@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Store {
@@ -47,6 +48,16 @@ public class Store {
         ArrayList<Item> arr = new ArrayList<>();
         for(Item temp: items) {
             if(temp.getType() == type) {
+                arr.add(temp);
+            }
+        }
+        return arr;
+    }
+
+    public ArrayList<Item> getDollarStore() {
+        ArrayList<Item> arr = new ArrayList<>();
+        for(Item temp: items) {
+            if(temp.getPrice() <= 1.00) {
                 arr.add(temp);
             }
         }
