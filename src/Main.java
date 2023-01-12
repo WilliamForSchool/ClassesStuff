@@ -38,5 +38,6 @@ public class Main {
         System.out.println("The average price is $" + s.averageMenuPrice());
 
         System.out.println(s.getAllItemsOfType(1));
+        System.out.println(s.getDollarStore());
     }
 }
