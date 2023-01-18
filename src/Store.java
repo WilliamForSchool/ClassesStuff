@@ -63,4 +63,11 @@ public class Store {
         }
         return arr;
     }
+
+    public void addListToMenu(ArrayList<Item> newItems) {
+        items.addAll(newItems);
+        // for(Item temp: newItems) {
+        //     temp.add(items);
+        // }
+    }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Store s = new Store();
@@ -9,7 +10,7 @@ public class Main {
 
 
         Item Twix = new Item("Twix", 0.99, Item.CANDY);
-        Item Watchamacallit = new Item("Watchamacallit", 0.99, Item.CANDY);
+        Item Whatchamacallit = new Item("Whatchamacallit", 0.99, Item.CANDY);
         Item Snickers = new Item("Snickers", 0.99, Item.CANDY);
 
         Item Ham_Sandwich = new Item("Ham Sandwich", 3.99, Item.FOOD);
@@ -20,24 +21,31 @@ public class Main {
         Item Cupcake = new Item("Cupcake", 0.99, Item.SNACK);
         Item Bagel_Bites = new Item("Bagel Bites", 2.99, Item.SNACK);
 
+
+        ArrayList<Item> Snacks = new ArrayList<>();
+        Snacks.add(Twix);
+        Snacks.add(Whatchamacallit);
+        Snacks.add(Snickers);
+
+
         s.addItem(Water);
         s.addItem(Milk);
         s.addItem(Coke);
-        s.addItem(Watchamacallit);
-        s.addItem(Snickers);
         s.addItem(Burger);
         s.addItem(Hotdog);
         s.addItem(Cupcake);
         s.addItem(Bagel_Bites);
-        s.addItem(Twix);
         s.addItem(Ham_Sandwich);
         s.addItem(Trail_Mix);
+
+
+        s.addListToMenu(Snacks);
+
+
         s.printMenu();
 
-        System.out.println("The most expensive item is " + s.getMostExpensiveItem());
-        System.out.println("The average price is $" + s.averageMenuPrice());
 
-        System.out.println(s.getAllItemsOfType(1));
-        System.out.println(s.getDollarStore());
+
+
     }
 }
