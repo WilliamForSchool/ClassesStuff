@@ -70,4 +70,46 @@ public class Store {
             items.add(temp);
         }
     }
+
+
+    private boolean checkArray() {
+        for(int i = 0; i < items.size() - 1; i++) {
+            if(items.get(i).getPrice() > items.get(i + 1).getPrice()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void sortArray() {
+        checkArray();
+        while(!checkArray()) {
+            for(int i = 0; i < items.size() - 1; i++) {
+                if (items.get(i).getPrice() > items.get(i + 1).getPrice()) {
+                    Item temp = items.get(i + 1);
+                    Item temp2 = items.get(i);
+                    items.set(i, temp);
+                    items.set(i + 1, temp2);
+                }
+            }
+        }
+    }
+
+
+    public ArrayList<Item> removeDuplicates() {
+        ArrayList<Item> arr2 = new ArrayList<>();
+
+        for(int x = items.size() - 1; x >= 0; x--) {
+            Item currentItem = items.get(x);
+            for(int j = items.size() - 1; j >= 0; j--) {
+                if(currentItem.equals(items.get(j)) && x != j) {
+                    arr2.add(currentItem);
+                    items.remove(x);
+                }
+            }
+
+        }
+
+        return arr2;
+    }
 }

@@ -38,4 +38,10 @@ public class Item {
         this.price = price;
         this.type = type;
     }
+
+    public boolean equals(Item other) {
+        return other.name.equals(this.name);
+    }
+
+
 }
